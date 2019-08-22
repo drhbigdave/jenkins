@@ -11,4 +11,8 @@ services:
       - ./jenkins_data:/var/jenkins_home
       - ./home:/home
       - /var/run/docker.sock:/var/run/docker.sock
-    command: tail -f /dev/null
+      - ./dockershare:/dockershare
+#    build:
+#      context: ./
+#      dockerfile: Dockerfile
+#    command: tail -f /dev/null
